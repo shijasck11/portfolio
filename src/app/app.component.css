@@ -1,0 +1,130 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+  
+ 
+ .footer span{
+  padding: 10px;
+ } 
+
+
+
+.icons{
+  text-align: center;
+  padding-top: 50px;
+}
+  .icons img{
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+  }
+
+
+  h1{
+    text-align: center;
+  }
+
+  .name{
+    text-align: center;
+  }
+  .shijas { border-radius: 100px; background-color: #54b3d6; color: #111; font-family: 'Helvetica Neue', sans-serif; font-size: 100px; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center; }
+  
+  .name span{
+    padding: 5px;
+  }
+
+  .hi{
+    text-align: center;
+    padding: 20px;
+    font-size: large;
+  }
+
+  #about{
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  .shijas-img{
+    width: 250px;
+    height: 300px;
+  }
+
+  .content{
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .project-headings{
+    padding-left: 100px;
+    color: rgb(21, 0, 255);
+  }
+
+  .project-contents{
+    padding-left: 100px;
+  }
+
+  .headings{
+    color: rgb(255, 0, 0);
+  }
+
+
+  
+
+.img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+#sidebar {
+  position: fixed;
+  height: 100%;
+  min-width: 300px;
+  max-width: 300px;
+  background: #1d1919;
+  color: #fff; }
+
+  #sidebar.active {
+    margin-left: -300px; }
+
+  #sidebar .logo {
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto; }
+
+    #sidebar .logo span {
+      display: block; }
+
+  #sidebar ul.components {
+    padding: 0; }
+
+  #sidebar ul li {
+    font-size: 16px; }
+
+    #sidebar ul li > ul {
+      margin-left: 10px; }
+
+      #sidebar ul li > ul li {
+        font-size: 14px; }
+        
+    #sidebar ul li a {
+      text-decoration:none;
+      padding: 10px;
+      display: block;
+      color: rgba(255, 255, 255, 0.8);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+      #sidebar ul li a:hover {
+        color: #f8b739; }
+    #sidebar ul li.active > a {
+      background: transparent;
+      color: #f8b739; }
+  @media (max-width: 991.98px) {
+    #sidebar {
+      margin-left: -300px; }
+      #sidebar.active {
+        margin-left: 0; } }
+
+#content {
+  position: absolute;
+  left: 200px;
+  }
+
+  
