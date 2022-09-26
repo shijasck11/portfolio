@@ -1,0 +1,74 @@
+.icons{
+  text-align: center;
+  padding-top: 50px;
+}
+  .icons img{
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+  }
+
+
+  h1{
+    text-align: center;
+  }
+
+  .name{
+    text-align: center;
+  }
+  .shijas { 
+    border-radius: 20px; 
+    background-color: #22d5c9; 
+    color: #111; 
+    font-family: 'Helvetica Neue', sans-serif; 
+    font-size: 6.5vw; 
+    font-weight: bold; 
+    letter-spacing: -1px;
+    line-height: 1; 
+    text-align: center; }
+
+  
+  .name span{
+    padding: 5px;
+  }
+
+  .hi{
+    text-align: center;
+    padding: 20px;
+    font-size: large;
+  }
+
+  
+
+  .project-headings{
+    color: #1b35ff;
+  }
+
+
+
+  .headings{
+    color: rgb(255, 0, 0);
+  }
+
+  .inner-contents{    
+  
+    justify-content: center;
+    padding-left: 330px;
+    padding-right: 30px;
+  }
+
+.headings{
+  font-family: fantasy, copperplate;
+}
+
+.inner-contents  {
+  font-family: serif;
+ 
+}
+
+.para{
+  padding-top: 50px;
+  font-size: 1.2vw;
+}
+
+
