@@ -11,7 +11,7 @@
       </a>
     </li>
     <li>
-      <a routerLink="/projects" class="nav-link">
+      <a [routerLink]="'/projects'" class="nav-link">
         <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
         Projects
       </a>
@@ -48,5 +48,6 @@
     </div>
   </footer>
 </aside>
-
-<app-about></app-about>
+<main>
+  <router-outlet></router-outlet>
+</main>

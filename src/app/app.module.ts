@@ -19,7 +19,6 @@ import { ProjectsComponent } from './projects/projects.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
