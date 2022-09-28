@@ -12,4 +12,16 @@ export class ProjectsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  cbclick(){
+    window.open("https://campusbuddy.netlify.app/landing-page", "_blank");
+  }
+
+  rfclick(){
+    window.open("https://github.com/rania-arbash-senecacollege-ca/xamarin-form-group-app-group-3", "_blank");
+  }
+
+  craclick(){
+    window.open("https://github.com/shijasck11/Ionic-Angular-Cash-Registration-App", "_blank");
+  }
+
 }

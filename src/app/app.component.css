@@ -128,13 +128,13 @@ ul{
   padding-top: 1vw;
 }
 
-ul li {
-  padding-left: 50px;
+ul li a {
+  text-align: center;
 }
 
+
 ul li a:hover {
-  align-self: center;
-  box-shadow: inset 150px 0 0 0 #54b3d6;
+  box-shadow: inset 15px 0 0 0 #54b3d6;
   color: white;
 }
 
