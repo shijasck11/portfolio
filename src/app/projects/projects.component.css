@@ -1,9 +1,9 @@
 .container{
     padding-left: 200px;
-    padding-top: 10px;
 }
 
 .main-heading{
+    padding-top: 10px;
     font: 3vw sans-serif;
     text-align: center;
     padding-bottom: 30px;
