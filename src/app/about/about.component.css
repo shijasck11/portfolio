@@ -4,8 +4,16 @@
 }
   .icons img{
     padding: 20px;
-    width: 12vw;
-    height: 12vw;
+    width: 13vw;
+    height: 13vw;
+  }
+
+  @media screen and (max-width: 481px) {
+    .icons img{
+      padding: 10px;
+      width: 15vw;
+      height: 15vw;
+    }
   }
 
   .contact-icons span:hover {
