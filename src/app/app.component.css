@@ -5,6 +5,12 @@
   padding: 10px;
  } 
 
+ footer h1{
+  color: #FFF;
+ }
+
+
+
 .icons{
   text-align: center;
   padding-top: 50px;
@@ -15,6 +21,13 @@
     height: 100px;
   }
 
+  .resume a{
+    padding-left: 100px;
+  }
+
+  .resume p{
+    padding-left: 60px;
+  }
 
   h1{
     text-align: center;
@@ -57,10 +70,16 @@
     color: rgb(255, 0, 0);
   }
 
+  @media (max-width: 768px) {
+    #sidebar {
+        display: none;
+    }
+}
+
   #sidebar{
     position: fixed;
     height: 100%;
-
+    background: rgb(22, 18, 37);
   }
 
   .inner-contents{    
@@ -87,6 +106,7 @@
 }
 
 .contact-icons{
+  color:white;
   padding-left: 50px;
   padding-top: 10px;  
   padding-bottom: 20px;
@@ -113,9 +133,9 @@
 
 
 .resume {
-  align-self: center;
-  padding: 5px;
+  padding-left: 10px;
   font-family: 'Aclonica';
+  color: rgb(255, 255, 255);
 }
 
 footer span:hover {

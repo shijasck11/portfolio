@@ -57,6 +57,12 @@
     padding-right: 30px;
   }
 
+  @media (max-width: 768px){
+    .inner-contents{
+      padding-left: 0;
+    }
+  }
+
 .headings{
   font-family: fantasy, copperplate;
 }

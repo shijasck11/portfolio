@@ -1,7 +1,11 @@
 .container{
     padding-left: 200px;
 }
-
+@media (max-width: 768px){
+    .container{
+      padding-left: 0;
+    }
+  }
 .main-heading{
     padding-top: 10px;
     font: 3vw sans-serif;

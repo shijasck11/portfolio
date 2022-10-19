@@ -1,5 +1,5 @@
 
-<aside id="sidebar" class="sidebar d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
+<div id="sidebar" style="width: 280px;">
   <div class="cover-img">
     <img id="shijas-cover" src="../assets/IMG_0478.png">
   </div>
@@ -23,10 +23,13 @@
     
   </ul>
   <hr >
-    <a class="resume" href="../assets/MuhammedShijas Cherakkatil Resume.docx" download="MuhammedShijas Cherakkatil Resume.docx">
-      <button class="btn btn-one" id="resumeButton" type="button" >Resume</button>
+  <span class="resume">
+    <a href="../assets/MuhammedShijas Cherakkatil Resume.docx" download="MuhammedShijas Cherakkatil Resume.docx">
+      <button id="resumeButton" class="btn btn-one" id="resumeButton" type="button" >Resume</button>
     </a>
-    <p class="resume">Download my Resume Here!</p>
+    <p>Download my Resume Here!</p>
+  </span>
+    
     
   
 
@@ -51,7 +54,7 @@
       </span>
     </div>
   </footer>
-</aside>
+</div>
 <main>
   <router-outlet></router-outlet>
 </main>
