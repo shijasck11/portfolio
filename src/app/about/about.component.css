@@ -12,6 +12,11 @@
     cursor: pointer;
     color: #ffee10;
   }
+
+  button{
+    background-color: rgb(24, 39, 74);
+    color: white;
+  }
   
   .contact-icons{
     text-align: center;
