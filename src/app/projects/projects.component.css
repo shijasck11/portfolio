@@ -3,7 +3,7 @@
 }
 @media (max-width: 768px){
     .container{
-      padding-left: 0;
+      padding-left: 10px;
     }
   }
 .main-heading{
@@ -14,6 +14,16 @@
      border-radius: 25px;
     letter-spacing: -1px;
 }
+
+
+footer{
+    background: rgb(22, 18, 37);
+  }
+
+  footer a{
+    color: white;
+    text-align: center;
+  }
 
 
 .project-headings{

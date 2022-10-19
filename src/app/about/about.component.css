@@ -4,10 +4,18 @@
 }
   .icons img{
     padding: 20px;
-    width: 100px;
-    height: 100px;
+    width: 12vw;
+    height: 12vw;
   }
 
+  footer{
+    background: rgb(22, 18, 37);
+  }
+
+  footer a{
+    color: white;
+    text-align: center;
+  }
 
   h1{
     text-align: center;
@@ -59,7 +67,7 @@
 
   @media (max-width: 768px){
     .inner-contents{
-      padding-left: 0;
+      padding: 10px;
     }
   }
 
