@@ -8,7 +8,33 @@
     height: 12vw;
   }
 
+  .contact-icons span:hover {
+    cursor: pointer;
+    color: #ffee10;
+  }
+  
+  .contact-icons{
+    text-align: center;
+    padding-bottom: 1 0px;
+  }
+
+  .contact-icons span{
+    padding-right: 10px;    
+  }
+  .show-on-mobile h1{
+    text-align: center;
+  }
+
+  @media screen and (min-width: 481px) {
+    .show-on-mobile {
+      display: none;
+      text-align: center;
+    }
+
+    
+  }
   footer{
+    
     background: rgb(22, 18, 37);
   }
 
@@ -82,7 +108,6 @@
 
 .para{
   padding-top: 50px;
-  font-size: 1.2vw;
 }
 
 

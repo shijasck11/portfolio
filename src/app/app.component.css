@@ -1,12 +1,14 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
   
  
- .footer span{
-  padding: 10px;
+ footer svg{
+  
+  align-items: center;
  } 
 
  footer h1{
   color: #FFF;
+  padding-left: 10px;
  }
 
 
@@ -79,6 +81,7 @@
   #sidebar{
     position: fixed;
     height: 100%;
+    max-width: 300px;
     background: rgb(22, 18, 37);
   }
 
