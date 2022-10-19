@@ -144,8 +144,6 @@
 footer span:hover {
   cursor: pointer;
   color: #ffee10;
-  box-shadow: 0 0 3px #1b35ff;
-  text-shadow: 0 0 3px #1b35ff;
 }
 ul{
   padding-top: 1vw;
