@@ -6,6 +6,12 @@
       padding-left: 10px;
     }
   }
+
+  @media screen and (min-width: 481px) {
+    footer{
+      display: none;
+    }
+  }
 .main-heading{
     padding-top: 10px;
     font: 3vw sans-serif;

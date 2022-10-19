@@ -46,6 +46,13 @@
 
     
   }
+
+  @media screen and (min-width: 481px) {
+    footer{
+      display: none;
+    }
+  }
+
   footer{
     
     background: rgb(22, 18, 37);
