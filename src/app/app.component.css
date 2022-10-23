@@ -78,6 +78,34 @@
     }
 }
 
+@media (min-width: 768px) {
+  header{
+    display: none;
+  }
+}
+
+header{
+  background: rgb(22, 18, 37);
+  color: white;
+}
+
+header a{
+  align-self: center;
+  color: rgb(246, 6, 6);
+  font-size: 4vw;
+}
+
+.flex-container {
+    display: flex;
+}
+
+
+#shijas-header{
+  padding: 10px;
+  height: 15vw;
+  width: 15vw;
+}
+
   #sidebar{
     position: fixed;
     height: 100%;
