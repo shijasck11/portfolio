@@ -1,7 +1,10 @@
 
 .container{
-    padding-left: 200px;
     height: 100vh;
+    justify-content: center;   
+    padding-left: 220px;
+    
+    padding-right: 30px;
     padding-top: 15px;
 }
 @media (max-width: 768px){
