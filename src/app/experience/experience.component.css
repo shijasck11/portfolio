@@ -3,7 +3,9 @@
     height: 100vh;
     justify-content: center;   
     padding-left: 250px;
+    padding-bottom: 10vh;   
     
+    font-size: 18px; 
     padding-right: 30px;
     padding-top: 15px;
 }
@@ -56,6 +58,5 @@ footer{
 
 .contents{
     font-family: Franklin Gothic, Arial Bold;
-    font-size: 18px;
     
 }
