@@ -1,8 +1,8 @@
 .container{
-    padding-left: 220px;
+    padding-left: 250px;
     justify-content: center;
     
-    padding-right: 30px;
+    padding-right: 150px;
 }
 @media (max-width: 768px){
     .container{
