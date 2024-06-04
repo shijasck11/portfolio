@@ -24,4 +24,8 @@ export class ProjectsComponent implements OnInit {
     window.open("https://github.com/shijasck11/Ionic-Angular-Cash-Registration-App", "_blank");
   }
 
+  sumo2unityClick(){
+    window.open("https://github.com/SimuTraffX-Lab/SUMO2Unity", "_blank");
+  }
+
 }

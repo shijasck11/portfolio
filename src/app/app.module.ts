@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ExperienceComponent } from './experience/experience.component';
+import { PublicationsComponent } from './publications/publications.component';
 
 
 
@@ -15,7 +16,8 @@ import { ExperienceComponent } from './experience/experience.component';
     AppComponent,
     AboutComponent,
     ProjectsComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    PublicationsComponent
     
   ],
   imports: [

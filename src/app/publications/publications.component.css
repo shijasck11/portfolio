@@ -1,0 +1,60 @@
+
+.container{
+  height: 100vh;
+  justify-content: center;
+  padding-left: 250px;
+  padding-bottom: 10vh;
+
+  font-size: 18px;
+  padding-right: 30px;
+  padding-top: 15px;
+}
+@media (max-width: 768px){
+  .container{
+    padding-left: 10px;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  footer{
+    display: none;
+  }
+}
+.main-heading{
+  padding-top: 10px;
+  font: 3vw sans-serif;
+  text-align: center;
+  padding-bottom: 30px;
+   border-radius: 25px;
+  letter-spacing: -1px;
+}
+
+
+footer{
+  background: rgb(22, 18, 37);
+}
+
+footer a{
+  color: white;
+  text-align: center;
+}
+
+
+.project-headings{
+  font-family: serif;
+}
+
+.project-headings svg{
+  color: blue;
+}
+
+
+.tools{
+  padding-top: 1px;
+  font-family: monospace;
+}
+
+.contents{
+  font-family: Franklin Gothic, Arial Bold;
+
+}
