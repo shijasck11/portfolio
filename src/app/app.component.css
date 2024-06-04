@@ -1,10 +1,10 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
-  
- 
+
+
  footer svg{
-  
+
   align-items: center;
- } 
+ }
 
  footer h1{
   color: #FFF;
@@ -38,18 +38,18 @@
   .name{
     text-align: center;
   }
-  .shijas { 
-    border-radius: 20px; 
-    background-color: #22d5c9; 
-    color: #111; 
-    font-family: 'Helvetica Neue', sans-serif; 
-    font-size: 6.5vw; 
-    font-weight: bold; 
+  .shijas {
+    border-radius: 20px;
+    background-color: #22d5c9;
+    color: #111;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 6.5vw;
+    font-weight: bold;
     letter-spacing: -1px;
-    line-height: 1; 
+    line-height: 1;
     text-align: center; }
 
-  
+
   .name span{
     padding: 5px;
   }
@@ -60,7 +60,7 @@
     font-size: large;
   }
 
-  
+
 
   .project-headings{
     color: #1b35ff;
@@ -107,8 +107,8 @@ header a{
 
 #shijas-header{
   padding: 10px;
-  height: 15vw;
-  width: 15vw;
+  height: 20vw;
+  width: 20vw;
 }
 
   #sidebar{
@@ -118,19 +118,19 @@ header a{
     background: rgb(22, 18, 37);
   }
 
-  .inner-contents{    
-    padding-left: 330px;    
-    
+  .inner-contents{
+    padding-left: 330px;
+
   }
 
 #shijas-cover{
   height: 220px;
   width: 220px;
-  
+
 }
 
 .cover-img{
-  
+
   vertical-align: middle;
   border-style: none;
   background-size: cover;
@@ -148,7 +148,7 @@ header a{
 
 .contact-icons span{
   padding: 15px;
-  
+
 }
 
 .headings{
@@ -156,7 +156,7 @@ header a{
 }
 
 .inner-contents  {
-  font-family: serif; 
+  font-family: serif;
 }
 
 .para{
@@ -235,8 +235,8 @@ ul li a:hover {
   letter-spacing: 2px;
 }
 .btn-one:hover::before {
-  opacity: 1; 
-  transform: scale(1, 1); 
+  opacity: 1;
+  transform: scale(1, 1);
 }
 .btn-one::after {
   content: '';
@@ -250,7 +250,7 @@ ul li a:hover {
   background-color: rgba(255,255,255,0.1);
 }
 .btn-one:hover::after {
-  opacity: 0; 
+  opacity: 0;
   transform: scale(0.1, 1);
 }
 

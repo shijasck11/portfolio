@@ -1,6 +1,5 @@
 
 .container{
-  height: 100vh;
   justify-content: center;
   padding-left: 250px;
   padding-bottom: 10vh;
@@ -14,12 +13,6 @@
     padding-left: 10px;
   }
 }
-
-@media screen and (min-width: 481px) {
-  footer{
-    display: none;
-  }
-}
 .main-heading{
   padding-top: 10px;
   font: 3vw sans-serif;
@@ -30,14 +23,7 @@
 }
 
 
-footer{
-  background: rgb(22, 18, 37);
-}
 
-footer a{
-  color: white;
-  text-align: center;
-}
 
 
 .project-headings{
@@ -46,15 +32,4 @@ footer a{
 
 .project-headings svg{
   color: blue;
-}
-
-
-.tools{
-  padding-top: 1px;
-  font-family: monospace;
-}
-
-.contents{
-  font-family: Franklin Gothic, Arial Bold;
-
 }
