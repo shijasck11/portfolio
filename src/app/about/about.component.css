@@ -31,14 +31,14 @@
     background-color: rgb(24, 39, 74);
     color: white;
   }
-  
+
   .contact-icons{
     text-align: center;
     padding-bottom: 1 0px;
   }
 
   .contact-icons span{
-    padding-right: 10px;    
+    padding-right: 10px;
   }
   .show-on-mobile h1{
     text-align: center;
@@ -50,7 +50,7 @@
       text-align: center;
     }
 
-    
+
   }
 
   @media screen and (min-width: 481px) {
@@ -60,7 +60,7 @@
   }
 
   footer{
-    
+
     background: rgb(22, 18, 37);
   }
 
@@ -76,18 +76,18 @@
   .name{
     text-align: center;
   }
-  .shijas { 
-    border-radius: 20px; 
-    background-color: #22d5c9; 
-    color: #111; 
-    font-family: 'Helvetica Neue', sans-serif; 
-    font-size: 6.5vw; 
-    font-weight: bold; 
+  .shijas {
+    border-radius: 20px;
+    background-color: #22d5c9;
+    color: #111;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 6.5vw;
+    font-weight: bold;
     letter-spacing: -1px;
-    line-height: 1; 
+    line-height: 1;
     text-align: center; }
 
-  
+
   .name span{
     padding: 5px;
   }
@@ -98,7 +98,7 @@
     font-size: large;
   }
 
-  
+
 
   .project-headings{
     color: #1b35ff;
@@ -110,17 +110,17 @@
     color: rgb(255, 0, 0);
   }
 
-  .inner-contents{    
-  
+  .inner-contents{
+    height: 100vh;
     justify-content: center;
     padding-left: 330px;
     padding-right: 30px;
-    height: 100vh;
   }
 
   @media (max-width: 768px){
     .inner-contents{
       padding: 10px;
+      height: 100%;
     }
   }
 
