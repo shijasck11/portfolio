@@ -28,4 +28,8 @@ export class ProjectsComponent implements OnInit {
     window.open("https://github.com/SimuTraffX-Lab/SUMO2Unity", "_blank");
   }
 
+  vibeTribeClick(){
+    window.open("https://github.com/StameLife/VibeTribe", "_blank");
+  }
+
 }

@@ -65,3 +65,49 @@ footer{
 .contents{
     font-family: Franklin Gothic, Arial Bold;
 }
+
+.description{
+  font-size: 14px;
+  margin-left: 2%;
+}
+
+.DemoVideoPlayerContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.DemoVideoPlayer {
+  flex: 1 1 30%; /* Default to 3 per row */
+  max-width: 30%;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .DemoVideoPlayer {
+    flex: 1 1 45%; /* Adjust to 2 per row on mobile */
+    max-width: 45%;
+  }
+}
+
+.DemoVideoPlayer video {
+  width: 100%;
+  height: auto;
+  max-width: 550px; /* Adjust this value based on your design */
+  max-height: 500px; /* Adjust this value based on your design */
+}
+
+@media (max-width: 768px) {
+  .DemoVideoPlayer video {
+    max-width: 40vw; /* Full width on mobile */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 250px; /* Maintain height to fit mobile screen */
+  }
+}
+
+.videoCaption {
+  margin-top: 10px; /* Optional: Adjust spacing between the video and caption */
+  font-size: 14px; /* Optional: Adjust font size */
+  color: #333; /* Optional: Set caption color */
+}
