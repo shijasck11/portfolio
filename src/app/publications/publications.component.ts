@@ -13,7 +13,7 @@ export class PublicationsComponent implements OnInit {
   }
 
   publicationClick(){
-    window.open("https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=SUMO2Unity%3A+An+Open-Source+Traffic+Co-Simulation+Tool+to+Improve+Road+Safety&btnG=", "_blank");
+    window.open("https://ieeexplore.ieee.org/abstract/document/10588571?casa_token=11J2WauGrLYAAAAA:vzF7SiqHTtIMLHCbE9Fwde0eWMxAU3UP9IrKNcviIJR_9D8iK7MllR4l24gcEDbv3h5TlM2lv94", "_blank");
   }
 
 }

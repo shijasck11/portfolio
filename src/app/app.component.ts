@@ -19,5 +19,10 @@ export class AppComponent {
   github(){
     window.location.href = "https://www.github.com/shijasck11"
   }
+
+  resumeClicked(){
+    console.log("Working")
+    window.location.href = "https://docs.google.com/document/d/1yCjNpuGv09ALWWRp7ZWJLeQuKweZAv3t/export?format=pdf"
+  }
 }
 

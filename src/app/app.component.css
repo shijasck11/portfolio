@@ -269,3 +269,22 @@ main{
 .dropdown-menu a{
 }
 
+#resume-button-section{
+  text-align: center;
+
+}
+
+#resume-button{
+  text-align: center;
+  border-radius: 0.5em;
+  padding: 0.3em 1em;
+  font-weight: 600;
+  border-width: 0em;
+  font-size: 1.2em;
+}
+
+#resume-button:hover{
+  background-color: black;
+  color: white;
+}
+
