@@ -192,15 +192,15 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
             onClick={onClose}
         >
             <motion.div
-                className="bg-secondary rounded-lg border border-border w-full max-w-4xl max-h-[90vh] flex flex-col md:flex-row overflow-hidden"
+                className="bg-secondary rounded-lg border border-border w-full max-w-4xl max-h-[90vh] flex flex-col md:flex-row overflow-y-auto md:overflow-hidden"
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
                 onClick={(e) => e.stopPropagation()}
             >
-                <div className="w-full md:w-1/2 p-8 flex flex-col">
+                <div className="w-full md:w-1/2 p-4 md:p-8 flex flex-col">
                     <h3 className="text-3xl font-bold mb-4 text-accent">{project.title}</h3>
-                    <div className="text-text-secondary mb-6 flex-grow overflow-y-auto">
+                    <div className="text-text-secondary mb-6 md:flex-grow md:overflow-y-auto">
                         {project.longDescription && project.longDescription.length > 0 ? (
                             <ul className="list-disc list-outside ml-5 space-y-2">
                                 {project.longDescription.map((point, index) => (
@@ -232,12 +232,12 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
                             <span key={tag} className="bg-border text-text-secondary text-xs font-semibold px-2.5 py-1 rounded-full">{tag}</span>
                         ))}
                     </div>
-                    <div className="flex space-x-4 text-accent">
+                    <div className="flex space-x-4 text-accent mt-auto">
                         {project.githubUrl && <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center gap-1">Code <ArrowTopRightOnSquareIcon className="w-4 h-4" /></a>}
                         {project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center gap-1">Live Demo <ArrowTopRightOnSquareIcon className="w-4 h-4" /></a>}
                     </div>
                 </div>
-                <div className="w-full md:w-1/2 bg-primary flex items-center justify-center p-8">
+                <div className="w-full md:w-1/2 bg-primary flex items-center justify-center p-4 md:p-8">
                     {activeVideo ? (
                         project.isMobile ? (
                              <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[10px] rounded-[2.5rem] h-[450px] w-[220px]">
