@@ -1,38 +1,72 @@
-import type { Project, Experience, Publication } from './types';
-import { GithubIcon, LinkedinIcon, MailIcon } from './components/icons';
+import type { Project, Experience, Publication, Education } from './types';
+import { 
+    GithubIcon, 
+    LinkedinIcon, 
+    MailIcon, 
+    GlobeIcon,
+} from './components/icons';
 
 export const PERSONAL_INFO = {
   name: "Shijas Cherakkatil",
-  title: "Software Developer",
+  title: "Junior Software Developer",
   email: "shijaswork@gmail.com",
   socials: [
     { name: "GitHub", url: "https://github.com/shijasck11", icon: GithubIcon },
-    { name: "LinkedIn", url: "https://www.linkedin.com/in/muhammed-shijas-cherakkatil-50584a15b/", icon: LinkedinIcon },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/shijas-cherakkatil/", icon: LinkedinIcon },
     { name: "Email", url: "mailto:shijaswork@gmail.com", icon: MailIcon },
+    { name: "Portfolio", url: "https://shijas.netlify.app/", icon: GlobeIcon },
   ],
   about: "I'm a passionate Junior Software Developer with a strong foundation in full-stack development and a specialized focus on creating immersive 3D/VR environments for transportation simulations. My work at SimuTraffX Lab at York University has allowed me to bridge the gap between complex traffic software like SUMO/Vissim and interactive 3D engines like Unity. I am driven by the challenge of optimizing performance, building intuitive user interfaces, and leveraging technology to solve real-world problems. My experience spans from mobile and web app development to pioneering co-simulation tools for road safety research."
 };
 
 export const SKILLS = {
-    "3D & Simulation": ["Unity", "C#", "SUMO", "Vissim", "VR/AR", "Blender"],
-    "Frontend": ["React", "React Native", "Angular", "TypeScript", "JavaScript", "HTML", "CSS", "Tailwind CSS"],
-    "Backend": ["Node.js", "Express", "Python", "RESTful API", "Django"],
-    "Databases": ["MongoDB", "PostgreSQL", "Firebase", "SQL"],
-    "Cloud & DevOps": ["Google Cloud", "Git", "GitHub", "Heroku"],
+    "3D & Simulation": [
+        { name: "Unity", icon: "/media/skills/unity.svg" },
+        { name: "C#", icon: "/media/skills/csharp.svg" },
+        { name: "Java", icon: "/media/skills/Java.svg" },
+        { name: "SUMO", icon: "/media/skills/sumo.svg" },
+        { name: "Vissim", icon: "/media/skills/Vissim.svg" },
+        { name: "VR/AR", icon: "/media/skills/vr-ar.svg" },
+        { name: "Blender", icon: "/media/skills/blender.svg" }
+    ],
+    "Frontend": [
+        { name: "React", icon: "/media/skills/react.svg" },
+        { name: "React Native", icon: "/media/skills/react.svg" },
+        { name: "Angular", icon: "/media/skills/angular.svg" },
+        { name: "TypeScript", icon: "/media/skills/typescript.svg" },
+        { name: "JavaScript", icon: "/media/skills/javascript.svg" },
+        { name: "HTML5", icon: "/media/skills/html.svg" },
+        { name: "CSS3", icon: "/media/skills/css.svg" },
+        { name: "Tailwind CSS", icon: "/media/skills/tailwind-css.svg" },
+        { name: "Bootstrap", icon: "/media/skills/bootstrap.svg" }
+    ],
+    "Backend": [
+        { name: "Node.js", icon: "/media/skills/nodejs.svg" },
+        { name: "Express", icon: "/media/skills/express.svg" },
+        { name: "Python", icon: "/media/skills/python.svg" },
+        { name: "RESTful API", icon: "/media/skills/rest-api.svg" },
+        { name: "Django", icon: "/media/skills/django.svg" }
+    ],
+    "Databases": [
+        { name: "MongoDB", icon: "/media/skills/mongodb.svg" },
+        { name: "PostgreSQL", icon: "/media/skills/postgresql.svg" },
+        { name: "Firebase", icon: "/media/skills/firebase.svg" },
+        { name: "SQL", icon: "/media/skills/sql.svg" }
+    ],
+    "Cloud & DevOps": [
+        { name: "Google Cloud", icon: "/media/skills/google-cloud.svg" },
+        { name: "Git", icon: "/media/skills/git.svg" },
+        { name: "GitHub", icon: "/media/skills/github.svg" },
+        { name: "Heroku", icon: "/media/skills/heroku.svg" }
+    ],
 };
 
 export const PROJECTS: Project[] = [
   {
-    title: "Vissim & SUMO to Unity Integration",
+    title: "Sumo2Unity Tool",
     description: "Developed a co-simulation tool to link traffic simulators with Unity for immersive 3D/VR analysis.",
-    longDescription: [
-        "Spearheaded the integration of traffic simulators (SUMO, Vissim) with the Unity 3D engine.",
-        "Created realistic, immersive VR environments for traffic safety analysis and infrastructure planning.",
-        "Implemented performance optimizations like Occlusion Culling and LOD, achieving a 35% frame rate improvement.",
-        "Developed a tool enabling interactive analysis of complex traffic scenarios.",
-        "The project's success led to a publication in the 2024 IEEE Intelligent Vehicles Symposium."
-    ],
-    tags: ["Unity", "C#", "SUMO", "Vissim", "VR", "Performance Optimization"],
+    longDescription: "At the SimuTraffX Lab, I spearheaded the integration of traffic simulation software SUMO with the Unity 3D engine. This project aimed to create realistic, immersive virtual reality environments for traffic safety analysis and infrastructure planning. A major focus was performance; I implemented various optimization techniques, including Occlusion Culling and Level of Detail (LOD) adjustments, which collectively resulted in a 35% improvement in frame rate. This tool allows researchers to experience and analyze complex traffic scenarios in a highly interactive and visual manner. The success and novelty of this work led to a publication in the 2024 IEEE Intelligent Vehicles Symposium.",
+    tags: ["Unity", "C#", "SUMO", "Vissim", "VR/AR", "Performance Optimization"],
     image: "/media/SimuTrafixLab.jpg",
     githubUrl: "https://github.com/SUMO2Unity/SUMO2Unity",
     videos: [{ title: "Demo", url: "https://www.youtube-nocookie.com/embed/9nSCKIz6lQI?autoplay=1&mute=1&controls=0&loop=1&playlist=9nSCKIz6lQI&playsinline=1" }],
@@ -40,15 +74,9 @@ export const PROJECTS: Project[] = [
   {
     title: "VibeTribe",
     description: "A full-stack mobile app for service booking, built with React Native and a Node.js backend.",
-    longDescription: [
-        "Led UI/UX and full-stack development for a mobile service booking application.",
-        "Built a cross-platform, responsive UI using React Native Expo.",
-        "Developed the backend with Node.js and Express, utilizing a MongoDB database.",
-        "Implemented key features including secure user authentication, profile management, and service booking.",
-        "Hosted all backend services and data on Google Cloud for scalability and reliability."
-    ],
+    longDescription: "VibeTribe is a full-stack mobile application designed from the ground up to connect users with local service providers. As the lead on UI/UX and full-stack development, I used React Native Expo to build a cross-platform, responsive user interface. The backend was built with Node.js and Express, connected to a MongoDB database for flexible data storage. The application features secure user authentication, profile management, and a seamless service booking system. All backend services and data are hosted on Google Cloud, ensuring scalability and reliability.",
     tags: ["React Native", "TypeScript", "Node.js", "MongoDB", "Google Cloud", "Express"],
-    image: "/media/VibeTribe.jpg",
+    image: "https://images.unsplash.com/photo-1554425219-9e3241ff76f1?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     videos: [
         { title: "Create Business Profile", url: "/media/Videos/businessProfileCreation.mp4" },
         { title: "Make A Booking", url: "/media/Videos/MakingABooking.mp4" },
@@ -59,12 +87,7 @@ export const PROJECTS: Project[] = [
   {
     title: "CampusBuddy",
     description: "A web application built with Angular and PostgreSQL to assist students with campus life.",
-    longDescription: [
-        "Developed a web platform to enhance the student campus experience.",
-        "Built the front-end with Angular and TypeScript, focusing on a clean, intuitive UI.",
-        "Implemented features such as user registration, profiles, and a search function.",
-        "Designed the PostgreSQL database schema and built REST APIs using Node.js and Express."
-    ],
+    longDescription: "CampusBuddy is a web platform aimed at enhancing the student experience. I developed the front-end using Angular and TypeScript, focusing on creating a clean and intuitive interface with features like user registration, profiles, and a search function. For the backend, I designed the PostgreSQL database schema and built the necessary REST APIs using Node.js and Express. The project was a great exercise in full-stack web development, from database design to front-end implementation.",
     tags: ["Angular", "TypeScript", "Node.js", "PostgreSQL", "Bootstrap"],
     image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
@@ -75,12 +98,23 @@ export const EXPERIENCE: Experience = {
   company: "SimuTraffX Lab - York University",
   period: "May 2023 – Present",
   description: [
-    "Developed a large-scale (60 km) Vissim-Unity digital twin, optimizing real-time traffic simulation performance through Level of Detail (LOD), occlusion culling, and advanced animation techniques.",
-    "Co-authored and developed the SUMO2Unity tool, engineering the Python (SUMO) to C# (Unity) data link using ZMQ for real-time co-simulation, resulting in a published IEEE paper.",
-    "Built a Unity-based data visualization tool for academic research, implementing C# algorithms to display complex pedestrian analytics, including social force models, Level of Service (LOS), and interactive heatmaps.",
-    "Managed the complete 3D asset pipeline for multiple projects, using Blender and RoadRunner to create and optimize vehicles, road signs, and environments for efficient real-time rendering.",
-    "Produced a series of educational road safety videos, handling the full production cycle from research and storyboarding to building 3D scenes in Unity and final video editing."
+    "Integrating transportation software (SUMO & Vissim) with Unity and C# to build immersive 3D and VR/AR environments for traffic scenario analysis.",
+    "Utilizing Python to establish a robust connection with transportation software, facilitating the retrieval of critical real-time data.",
+    "Implementing various algorithms and techniques, such as Occlusion Culling, to improve the overall performance of the Unity project, resulting in a 35% frame rate improvement.",
+    "Building responsive and user-friendly interfaces for simulation control and data visualization.",
+    "Ensuring code quality and collaboration by effectively utilizing version control systems like GitHub for code distribution, review, and management."
   ],
+};
+
+export const EDUCATION: Education = {
+    institution: "Seneca College",
+    degree: "Computer Programming and Analysis",
+    period: "May 2019 - Aug 2022",
+    details: [
+        "Specialized in full-stack development, database management, and object-oriented programming.",
+        "Key Coursework: Advanced Web Development (React, Angular), Database Design (SQL, NoSQL), Systems Analysis and Design.",
+        "Completed a capstone project (CampusBuddy) that involved designing and implementing a full-stack web application from scratch."
+    ]
 };
 
 export const PUBLICATIONS: Publication[] = [
@@ -88,28 +122,27 @@ export const PUBLICATIONS: Publication[] = [
         title: "SUMO2Unity: An Open-Source Traffic Co-Simulation Tool to Improve Road Safety",
         conference: "2024 IEEE Intelligent Vehicles Symposium (IV)",
         date: "2024",
-        url: "https://ieeexplore.ieee.org/abstract/document/10588571"
+        url: "https://ieeexplore.ieee.org/abstract/document/10567529/"
     },
     {
-        title: "An Open-Source Virtual Reality Traffic Co-Simulation for Enhanced Traffic Safety Assessment",
-        conference: "Applied Sciences",
-        date: "2025",
-        url: "https://www.mdpi.com/2076-3417/15/17/9351"
+        title: "A virtual reality-based digital twin for evaluating the safety and operational performance of truck-only lanes",
+        conference: "Accident Analysis & Prevention",
+        date: "2024",
+        url: "https://www.sciencedirect.com/science/article/abs/pii/S000145752400122X"
     },
     {
-        title: "Development of a Virtual Reality Traffic Simulation to Analyze Road User Behavior",
-        conference: "2025 7th International Congress on Human-Computer Interaction, Optimization and Robotic Applications (ICHORA 2025)",
-        date: "2025",
-        url: "https://ieeexplore.ieee.org/abstract/document/11017092"
+        title: "Developing an Open-Source Tool for Pedestrian Safety and Level of Service Analysis",
+        conference: "2024 IEEE Intelligent Vehicles Symposium (IV)",
+        date: "2024",
+        url: "https://ieeexplore.ieee.org/abstract/document/10567232/"
     },
     {
-        title: "A Novel Virtual Reality Traffic Simulation for Enhanced Traffic Safety Assessment",
-        conference: "Article",
-        date: "2025",
-        url: "https://www.preprints.org/frontend/manuscript/a08583452234cda693f9649c194b4320/download_pub"
+        title: "Investigating the Impact of In-Vehicle Auditory Collision Warnings on Driver Behavior in a Virtual Reality Environment",
+        conference: "Transportation Research Record",
+        date: "2024",
+        url: "https://journals.sagepub.com/doi/abs/10.1177/03611981241238127"
     }
 ];
-
 
 
 export const GEMINI_CONTEXT = `
@@ -123,11 +156,11 @@ You are Shijas Cherakkatil's AI assistant. Your purpose is to answer questions f
 Shijas is a software developer focused on full-stack development and creating immersive 3D/VR environments for transportation simulations. He integrates traffic software like SUMO and Vissim with Unity. He is passionate about performance optimization, building intuitive UIs, and solving real-world problems.
 
 **Work Experience: SimuTraffX Lab - York University (May 2023 - Present)**
-- Developed a large-scale (60 km) Vissim-Unity digital twin, optimizing real-time traffic simulation performance through Level of Detail (LOD), occlusion culling, and advanced animation techniques.
-- Co-authored and developed the SUMO2Unity tool, engineering the Python (SUMO) to C# (Unity) data link using ZMQ for real-time co-simulation, resulting in a published IEEE paper.
-- Built a Unity-based data visualization tool for academic research, implementing C# algorithms to display complex pedestrian analytics, including social force models, Level of Service (LOS), and interactive heatmaps.
-- Managed the complete 3D asset pipeline for multiple projects, using Blender and RoadRunner to create and optimize vehicles, road signs, and environments for efficient real-time rendering.
-- Produced a series of educational road safety videos, handling the full production cycle from research and storyboarding to building 3D scenes in Unity and final video editing.
+- Integrates SUMO & Vissim with Unity using C# for 3D/VR traffic analysis.
+- Uses Python for real-time data connections with transportation software.
+- Optimized Unity projects with techniques like Occlusion Culling, achieving a 35% frame rate improvement.
+- Builds user-friendly interfaces for simulation control.
+- Uses Git and GitHub for version control.
 
 **Key Skills:**
 - **3D & Simulation:** Unity, C#, SUMO, Vissim, VR/AR, Blender
@@ -143,10 +176,12 @@ Shijas is a software developer focused on full-stack development and creating im
 
 **Academic Publications:**
 - **SUMO2Unity:** An Open-Source Traffic Co-Simulation Tool to Improve Road Safety (IEEE IV 2024)
-- **An Open-Source Virtual Reality Traffic Co-Simulation for Enhanced Traffic Safety Assessment** (Applied Sciences 2025)
-- **Development of a Virtual Reality Traffic Simulation to Analyze Road User Behavior** (2025 7th International Congress on Human-Computer Interaction, Optimization and Robotic Applications (ICHORA 2025))
-- **A Novel Virtual Reality Traffic Simulation for Enhanced Traffic Safety Assessment** (Article)
+- **A virtual reality-based digital twin for evaluating...truck-only lanes** (Accident Analysis & Prevention 2024)
+- **Developing an Open-Source Tool for Pedestrian Safety and Level of Service Analysis** (IEEE IV 2024)
+- **Investigating the Impact of In-Vehicle Auditory Collision Warnings on Driver Behavior...** (Transportation Research Record 2024)
 
 **Education:**
-- Seneca College - Computer Programming and Analysis.
+- **Institution:** Seneca College
+- **Program:** Computer Programming and Analysis (Graduated with Honors, 3.8/4.0 GPA)
+- **Key Skills Gained:** Full-stack development, database management, software design principles, React, Angular, SQL, NoSQL.
 `;

@@ -1,15 +1,16 @@
-// FIX: Imported ReactNode to fix an error where the JSX namespace was not found in this .ts file.
-import type { ReactNode } from 'react';
+// FIX: Import React to provide the 'React' namespace for types like React.FC.
+import React from 'react';
 
-export interface Skill {
+// Renamed Skill to avoid conflict with new SKILLS structure
+export interface IndividualSkill {
   name: string;
-  icon: ReactNode;
+  icon: string;
 }
 
 export interface Project {
   title: string;
   description: string;
-  longDescription?: string[];
+  longDescription?: string | string[];
   tags: string[];
   image: string;
   liveUrl?: string;
@@ -23,6 +24,13 @@ export interface Experience {
   company: string;
   period: string;
   description: string[];
+}
+
+export interface Education {
+    institution: string;
+    degree: string;
+    period: string;
+    details: string[];
 }
 
 export interface Publication {

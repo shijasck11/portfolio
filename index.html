@@ -5,35 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shijas Cherakkatil | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'primary': '#f8fafc',
-              'secondary': '#ffffff',
-              'accent': '#032c60',
-              'accent-dark': '#0284c7',
-              'text-primary': '#0f172a',
-              'text-secondary': '#64748b',
-              'border': '#e2e8f0',
-            },
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-            },
-            animation: {
-              'pulse-glow': 'pulseGlow 2s infinite ease-in-out',
-            },
-            keyframes: {
-              pulseGlow: {
-                '0%, 100%': { boxShadow: '0 0 15px rgba(4, 44, 93, 0.3)' },
-                '50%': { boxShadow: '0 0 30px rgba(4, 44, 93, 0.6)' },
-              }
-            }
-          }
-        }
-      }
-    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -44,13 +15,14 @@
     "react/": "https://aistudiocdn.com/react@^19.1.1/",
     "react": "https://aistudiocdn.com/react@^19.1.1",
     "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.22",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.21.0"
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.21.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.3"
   }
 }
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-  <body class="bg-primary text-text-primary">
+  <body class="bg-black font-sans">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>

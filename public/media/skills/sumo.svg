@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 971.3 1050"
+   style="enable-background:new 0 0 971.3 1050;"
+   xml:space="preserve"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   width="210mm"
+   height="297mm"
+   sodipodi:docname="sumo-application.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"><metadata
+   id="metadata5737"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs5735"><inkscape:perspective
+   sodipodi:type="inkscape:persp3d"
+   inkscape:vp_x="0 : 526.18109 : 1"
+   inkscape:vp_y="0 : 1000 : 0"
+   inkscape:vp_z="744.09448 : 526.18109 : 1"
+   inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+   id="perspective5739" />
+	
+	
+</defs><sodipodi:namedview
+   inkscape:window-height="1138"
+   inkscape:window-width="1920"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0.0"
+   guidetolerance="10.0"
+   gridtolerance="10.0"
+   objecttolerance="10.0"
+   borderopacity="1.0"
+   bordercolor="#666666"
+   pagecolor="#ffffff"
+   id="base"
+   showgrid="false"
+   inkscape:zoom="1.2417144"
+   inkscape:cx="395.48003"
+   inkscape:cy="497.16864"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:current-layer="Layer_1" />
+<style
+   type="text/css"
+   id="style5654">
+	.st0{fill:#338033;}
+</style>
+<rect
+   style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#338033;stroke-width:9.25150394;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+   id="rect3167"
+   width="643.42096"
+   height="643.42096"
+   x="146.79964"
+   y="155.74266"
+   ry="55.704571"
+   inkscape:export-filename="C:\SVN-Repositories\SIMO\projects\sumo\logo\application-icons\sumo-icons\sumo-application-2.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90" /><g
+   id="g5658"
+   transform="matrix(0.7945429,0,0,0.7945429,77.81989,233.96026)"
+   inkscape:export-filename="C:\SVN-Repositories\SIMO\projects\sumo\logo\application-icons\sumo-icons\sumo-application-2.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+		<path
+   style="fill:#338033"
+   id="path5660"
+   d="M 220.3,223.1 L 644.2,392.7 C 557.2,402.6 479.2,416.6 392.1,450.8 L 479.1,359.3 L 411.9,330.8 L 197.2,544 L 281.7,602.9 C 403.4,537.7 616,500.2 723.4,500.6 L 809,339.4 L 306.1,168.7 L 220.3,223.1 z"
+   class="st0" />
+		<polygon
+   style="fill:#338033"
+   id="polygon5662"
+   points="332.6,297.2 399.5,325.5 175.4,528.8 104.5,479.3 332.6,297.2 "
+   class="st0" />
+		<polygon
+   style="fill:#338033"
+   id="polygon5664"
+   points="315.6,162.7 819.8,322.3 866.8,235.5 395.4,112.1 315.6,162.7 "
+   class="st0" />
+		<polygon
+   style="fill:#338033"
+   id="polygon5666"
+   points="673.5,25 544.4,128.1 604,142.8 726.5,33.5 673.5,25 "
+   class="st0" />
+		<polygon
+   style="fill:#338033"
+   id="polygon5668"
+   points="783.7,42.7 732.4,34.5 614.2,145.3 671,159.3 783.7,42.7 "
+   class="st0" />
+	</g>
+</svg>
