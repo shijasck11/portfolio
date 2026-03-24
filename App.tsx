@@ -7,7 +7,7 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { PERSONAL_INFO, SKILLS, EXPERIENCE, PROJECTS, PUBLICATIONS } from './constants';
-import { GithubIcon, LinkedinIcon, MailIcon, CodeBracketIcon, CubeTransparentIcon, ExternalLinkIcon, XMarkIcon } from './components/icons';
+import { GithubIcon, LinkedinIcon, MailIcon, CodeBracketIcon, CubeTransparentIcon, ExternalLinkIcon, XMarkIcon, MicrosoftStoreIcon } from './components/icons';
 
 const NavBar: React.FC = () => (
   <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-slate-200">
@@ -232,6 +232,17 @@ const ProjectModal: React.FC<{ project: any; onClose: () => void }> = ({ project
                   <ExternalLinkIcon className="w-4 h-4" />
                 )}
                 Visit Website
+              </a>
+            )}
+
+            {project.microsoftStoreUrl && (
+              <a 
+                href={project.microsoftStoreUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#0078D7] hover:bg-[#005A9E] text-white px-5 py-2.5 rounded-full text-sm font-medium transition-colors shadow-sm"
+              >
+                <MicrosoftStoreIcon className="w-4 h-4" /> Get from Microsoft Store
               </a>
             )}
           </div>

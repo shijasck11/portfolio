@@ -76,10 +76,11 @@ export const PROJECTS: Project[] = [
     tags: ["C#", ".NET 8", "WinUI 3", "Win2D", "MSIX", "Windows App SDK"],
     image: "/media/NeatNotes.png", // Replace with your actual screenshot path
     liveUrl: "https://stamesoftwares.github.io/",
+    microsoftStoreUrl: "https://apps.microsoft.com/detail/9N8H9XZMHLH6?hl=en-us&gl=CA&ocid=pdpshare",
     linkIcon: "/media/NeatNotesLogoSquare256.png", // Replace with your actual icon path
   },
   {
-    title: "Sumo2Unity Tool",
+    title: "Sumo2Unity",
     description: "Developed a co-simulation tool to link traffic simulators with Unity for immersive 3D/VR analysis.",
     longDescription: [
         "Spearheaded the integration of SUMO traffic simulation software with the Unity 3D engine.",
@@ -91,7 +92,7 @@ export const PROJECTS: Project[] = [
     tags: ["Unity", "C#", "SUMO", "Vissim", "VR/AR", "Performance Optimization"],
     image: "/media/SimuTrafixLab.jpg",
     githubUrl: "https://github.com/SimuTraffX-Lab/SUMO2Unity",
-    videos: [{ title: "Demo", url: "https://www.youtube-nocookie.com/embed/9nSCKIz6lQI?autoplay=1&mute=1&controls=0&loop=1&playlist=9nSCKIz6lQI&playsinline=1" }],
+    videos: [{ title: "Demo", url: "https://www.youtube.com/watch?v=9nSCKIz6lQI&list=TLGGlvP7zGF-afwyNDAzMjAyNg&t=4s" }],
   },
   {
     title: "VibeTribe",
