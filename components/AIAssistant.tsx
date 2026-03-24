@@ -59,7 +59,7 @@ export const AIAssistant: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-slate-100 mb-2">AI Assistant</h2>
             <p className="text-slate-400">Chat with my AI clone, powered by Google Gemini.</p>
         </div>
-        <div className="bg-white/5 rounded-lg border border-white/10 shadow-2xl flex flex-col flex-grow">
+        <div className="bg-slate-800/50 rounded-lg border border-slate-700 shadow-2xl flex flex-col flex-grow">
           <div className="flex-1 p-4 overflow-y-auto custom-scrollbar">
             {messages.map((msg, index) => (
               <motion.div
@@ -74,7 +74,7 @@ export const AIAssistant: React.FC = () => {
                     <CpuChipIcon className="w-5 h-5 text-white" />
                   </div>
                 )}
-                <div className={`max-w-[80%] px-4 py-2 rounded-lg ${msg.sender === 'user' ? 'bg-sky-500 text-white rounded-br-none' : 'bg-white/10 text-slate-200 rounded-bl-none'}`}>
+                <div className={`max-w-[80%] px-4 py-2 rounded-lg ${msg.sender === 'user' ? 'bg-sky-500 text-white rounded-br-none' : 'bg-slate-800 text-slate-200 rounded-bl-none'}`}>
                   <p className="whitespace-pre-wrap">{msg.text}</p>
                 </div>
                  {msg.sender === 'user' && (
@@ -95,7 +95,7 @@ export const AIAssistant: React.FC = () => {
                      <div className="w-8 h-8 rounded-full bg-sky-500 flex-shrink-0 flex items-center justify-center">
                        <CpuChipIcon className="w-5 h-5 text-white" />
                      </div>
-                     <div className="flex items-center space-x-1 p-2 bg-white/10 rounded-lg">
+                     <div className="flex items-center space-x-1 p-2 bg-slate-800 rounded-lg">
                        <span className="w-2 h-2 bg-slate-400 rounded-full animate-pulse delay-0"></span>
                        <span className="w-2 h-2 bg-slate-400 rounded-full animate-pulse delay-150"></span>
                        <span className="w-2 h-2 bg-slate-400 rounded-full animate-pulse delay-300"></span>
@@ -105,14 +105,14 @@ export const AIAssistant: React.FC = () => {
             </AnimatePresence>
             <div ref={chatEndRef} />
           </div>
-          <form onSubmit={handleSendMessage} className="p-4 border-t border-white/10">
+          <form onSubmit={handleSendMessage} className="p-4 border-t border-slate-700">
             <div className="relative">
               <input
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Ask about my projects..."
-                className="w-full bg-black/20 border border-white/10 rounded-full py-2 pl-4 pr-12 text-slate-100 placeholder-slate-400 focus:ring-2 focus:ring-sky-400 focus:outline-none transition-shadow"
+                className="w-full bg-slate-900 border border-slate-700 rounded-full py-2 pl-4 pr-12 text-slate-100 placeholder-slate-400 focus:ring-2 focus:ring-sky-400 focus:outline-none transition-shadow"
                 disabled={isLoading}
               />
               <button

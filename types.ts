@@ -15,6 +15,7 @@ export interface Project {
   image: string;
   liveUrl?: string;
   githubUrl?: string;
+  linkIcon?: string;
   videos?: { title: string; url: string }[];
   isMobile?: boolean;
 }
