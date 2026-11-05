@@ -13,7 +13,7 @@ const NavBar: React.FC = () => (
   <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-slate-200">
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex justify-between items-center h-16">
-        <div className="flex-shrink-0 flex items-center">
+        <div className="shrink-0 flex items-center">
           <span className="font-bold text-xl text-slate-800">{PERSONAL_INFO.name}</span>
         </div>
         <div className="hidden md:flex space-x-8">
@@ -74,7 +74,7 @@ const ExperienceSection: React.FC = () => (
     className="py-16 px-4 max-w-4xl mx-auto"
   >
     <h2 className="text-3xl font-bold text-[#1e3a8a] text-center mb-10">Experience</h2>
-    <div className="bg-white rounded-xl shadow-sm border border-slate-100 p-8">
+    <div className="bg-white rounded-xl shadow-xs border border-slate-100 p-8">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-2">
         <h3 className="text-2xl font-bold text-slate-900">{EXPERIENCE.role}</h3>
         <span className="text-slate-600 font-semibold mt-2 md:mt-0">{EXPERIENCE.period}</span>
@@ -104,7 +104,7 @@ const SkillsSection: React.FC = () => (
     <h2 className="text-3xl font-bold text-[#1e3a8a] text-center mb-10">Technical Skills</h2>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       {/* Languages & Frameworks */}
-      <div className="bg-white rounded-xl shadow-sm border border-slate-100 p-6">
+      <div className="bg-white rounded-xl shadow-xs border border-slate-100 p-6">
         <div className="flex items-center gap-3 mb-6">
           <CodeBracketIcon className="w-6 h-6 text-slate-800" />
           <h3 className="text-xl font-bold text-slate-900">Languages & Frameworks</h3>
@@ -119,7 +119,7 @@ const SkillsSection: React.FC = () => (
       </div>
       
       {/* 3D & Simulation */}
-      <div className="bg-white rounded-xl shadow-sm border border-slate-100 p-6">
+      <div className="bg-white rounded-xl shadow-xs border border-slate-100 p-6">
         <div className="flex items-center gap-3 mb-6">
           <CubeTransparentIcon className="w-6 h-6 text-slate-800" />
           <h3 className="text-xl font-bold text-slate-900">3D & Simulation</h3>
@@ -134,7 +134,7 @@ const SkillsSection: React.FC = () => (
       </div>
 
       {/* Databases & Cloud */}
-      <div className="bg-white rounded-xl shadow-sm border border-slate-100 p-6">
+      <div className="bg-white rounded-xl shadow-xs border border-slate-100 p-6">
         <div className="flex items-center gap-3 mb-6">
           <CodeBracketIcon className="w-6 h-6 text-slate-800" />
           <h3 className="text-xl font-bold text-slate-900">Databases & Cloud</h3>
@@ -157,7 +157,7 @@ const ProjectModal: React.FC<{ project: any; onClose: () => void }> = ({ project
   if (!project) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-xs">
       <div className="bg-white rounded-2xl shadow-xl w-full max-w-4xl max-h-[90vh] overflow-y-auto relative flex flex-col md:flex-row">
         <button 
           onClick={onClose}
@@ -169,7 +169,7 @@ const ProjectModal: React.FC<{ project: any; onClose: () => void }> = ({ project
         <div className="p-8 md:w-1/2 flex flex-col">
           <h2 className="text-3xl font-bold text-[#1e3a8a] mb-6">{project.title}</h2>
           
-          <ul className="space-y-4 mb-8 flex-grow">
+          <ul className="space-y-4 mb-8 grow">
             {(Array.isArray(project.longDescription) ? project.longDescription : [project.longDescription]).map((desc: string, i: number) => (
               <li key={i} className="flex items-start text-slate-600">
                 <span className="text-slate-400 mr-2 mt-1.5 text-xs">•</span>
@@ -224,7 +224,7 @@ const ProjectModal: React.FC<{ project: any; onClose: () => void }> = ({ project
                 href={project.liveUrl} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-white border border-slate-200 hover:bg-slate-50 text-slate-800 px-5 py-2.5 rounded-full text-sm font-medium transition-colors shadow-sm"
+                className="inline-flex items-center gap-2 bg-white border border-slate-200 hover:bg-slate-50 text-slate-800 px-5 py-2.5 rounded-full text-sm font-medium transition-colors shadow-xs"
               >
                 {project.linkIcon ? (
                   <img src={project.linkIcon} alt="Link Icon" className="w-4 h-4 object-contain" />
@@ -240,7 +240,7 @@ const ProjectModal: React.FC<{ project: any; onClose: () => void }> = ({ project
                 href={project.microsoftStoreUrl} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#0078D7] hover:bg-[#005A9E] text-white px-5 py-2.5 rounded-full text-sm font-medium transition-colors shadow-sm"
+                className="inline-flex items-center gap-2 bg-[#0078D7] hover:bg-[#005A9E] text-white px-5 py-2.5 rounded-full text-sm font-medium transition-colors shadow-xs"
               >
                 <MicrosoftStoreIcon className="w-4 h-4" /> Get it for Windows
               </a>
@@ -297,15 +297,15 @@ const ProjectsSection: React.FC = () => {
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {PROJECTS.map((project, index) => (
-          <div key={index} className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden flex flex-col h-full">
+          <div key={index} className="bg-white rounded-xl shadow-xs border border-slate-100 overflow-hidden flex flex-col h-full">
             <div className="h-48 bg-slate-900 flex items-center justify-center p-4 relative overflow-hidden group">
                {/* Using a placeholder or the actual image if it fits well in a 16:9 box */}
                <img src={project.image} alt={project.title} className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-75 transition-opacity duration-300" />
                <div className="relative z-10 text-white font-bold text-xl drop-shadow-md">{project.title}</div>
             </div>
-            <div className="p-6 flex flex-col flex-grow">
+            <div className="p-6 flex flex-col grow">
               <h3 className="text-xl font-bold text-slate-900 mb-2">{project.title}</h3>
-              <p className="text-slate-500 mb-6 text-sm flex-grow">{project.description}</p>
+              <p className="text-slate-500 mb-6 text-sm grow">{project.description}</p>
               
               <div className="flex flex-wrap gap-2 mb-6">
                 {project.tags.slice(0, 4).map(tag => (
@@ -370,7 +370,7 @@ const ProjectsSection: React.FC = () => {
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             key={index} 
-            className="bg-white rounded-xl shadow-sm border border-slate-100 p-8 flex flex-col"
+            className="bg-white rounded-xl shadow-xs border border-slate-100 p-8 flex flex-col"
           >
             <h3 className="text-xl font-bold text-slate-900 mb-2">{pub.title}</h3>
             <p className="text-slate-500 mb-5">{pub.conference} - {pub.date}</p>
