@@ -242,7 +242,7 @@ const ProjectModal: React.FC<{ project: any; onClose: () => void }> = ({ project
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#0078D7] hover:bg-[#005A9E] text-white px-5 py-2.5 rounded-full text-sm font-medium transition-colors shadow-sm"
               >
-                <MicrosoftStoreIcon className="w-4 h-4" /> Get from Microsoft Store
+                <MicrosoftStoreIcon className="w-4 h-4" /> Get it for Windows
               </a>
             )}
           </div>
