@@ -1,0 +1,72 @@
+---
+import '../styles/global.css';
+import { PERSONAL_INFO } from '../../constants';
+
+interface Props {
+  /** Page-specific title. Omit on the home page to use the site title. */
+  title?: string;
+  /** Meta and social description, ideally 120–160 characters. */
+  description?: string;
+  /** Social preview image: a path under public/ or an absolute URL. */
+  image?: string;
+  imageAlt?: string;
+  type?: 'website' | 'article' | 'profile';
+  /** Keep the page out of search results (e.g. a 404 page). */
+  noindex?: boolean;
+}
+
+const SITE_TITLE = `${PERSONAL_INFO.name} | Portfolio`;
+const DEFAULT_DESCRIPTION =
+  `${PERSONAL_INFO.name} is a software developer building native Windows apps with C# and WinUI 3, ` +
+  'full-stack web and mobile apps, and Unity 3D/VR traffic simulations.';
+
+const {
+  title,
+  description = DEFAULT_DESCRIPTION,
+  image = '/media/profile.png',
+  imageAlt = PERSONAL_INFO.name,
+  type = 'website',
+  noindex = false,
+} = Astro.props;
+
+const fullTitle = title ? `${title} | ${PERSONAL_INFO.name}` : SITE_TITLE;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const imageUrl = new URL(image, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content={PERSONAL_INFO.name} />
+    <link rel="canonical" href={canonicalUrl} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <meta name="theme-color" content="#fafafa" />
+
+    {/* Open Graph */}
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content={SITE_TITLE} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:image:alt" content={imageAlt} />
+
+    {/* Twitter / X: "summary" suits the square-ish profile photo; switch to
+        summary_large_image once a 1200x630 preview image exists (step 7). */}
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
+    <meta name="twitter:image:alt" content={imageAlt} />
+
+    {/* Page-specific head content, e.g. JSON-LD */}
+    <slot name="head" />
+  </head>
+  <body class="min-h-screen bg-[#fafafa] font-sans text-slate-900">
+    <slot />
+  </body>
+</html>
