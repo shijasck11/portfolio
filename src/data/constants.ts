@@ -4,7 +4,7 @@ import {
     LinkedinIcon, 
     MailIcon, 
     GlobeIcon,
-} from './components/icons';
+} from '../components/icons';
 
 export const PERSONAL_INFO = {
   name: "Shijas Cherakkatil",

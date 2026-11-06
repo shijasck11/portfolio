@@ -1,0 +1,22 @@
+---
+import { EXPERIENCE } from '../data/constants';
+---
+
+<section id="experience" class="reveal py-16 px-4 max-w-4xl mx-auto">
+  <h2 class="text-3xl font-bold text-[#1e3a8a] text-center mb-10">Experience</h2>
+  <div class="bg-white rounded-xl shadow-xs border border-slate-100 p-8">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2">
+      <h3 class="text-2xl font-bold text-slate-900">{EXPERIENCE.role}</h3>
+      <span class="text-slate-600 font-semibold mt-2 md:mt-0">{EXPERIENCE.period}</span>
+    </div>
+    <p class="text-lg text-slate-500 mb-6">{EXPERIENCE.company}</p>
+    <ul class="space-y-3">
+      {EXPERIENCE.description.map((point) => (
+        <li class="flex items-start">
+          <span class="text-slate-400 mr-2 mt-1.5 text-xs" aria-hidden="true">•</span>
+          <span class="text-slate-500 leading-relaxed">{point}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

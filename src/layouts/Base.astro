@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { PERSONAL_INFO } from '../../constants';
+import { PERSONAL_INFO } from '../data/constants';
 
 interface Props {
   /** Page-specific title. Omit on the home page to use the site title. */
@@ -62,6 +62,21 @@ const imageUrl = new URL(image, Astro.site);
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={imageUrl} />
     <meta name="twitter:image:alt" content={imageAlt} />
+
+    {/* Scroll reveal: see .reveal in global.css. Runs before first paint so
+        revealed sections never flash. */}
+    <script is:inline>
+      document.documentElement.classList.add('js');
+      addEventListener('DOMContentLoaded', () => {
+        const els = document.querySelectorAll('.reveal');
+        const show = (el) => el.classList.add('is-visible');
+        if (!('IntersectionObserver' in window)) return els.forEach(show);
+        const io = new IntersectionObserver((entries) => {
+          for (const e of entries) if (e.isIntersecting) { show(e.target); io.unobserve(e.target); }
+        });
+        els.forEach((el) => io.observe(el));
+      });
+    </script>
 
     {/* Page-specific head content, e.g. JSON-LD */}
     <slot name="head" />

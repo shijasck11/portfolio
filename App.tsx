@@ -6,9 +6,9 @@
 
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { PERSONAL_INFO, SKILLS, EXPERIENCE, PROJECTS, PUBLICATIONS } from './constants';
-import type { Project } from './types';
-import { GithubIcon, LinkedinIcon, MailIcon, CodeBracketIcon, CubeTransparentIcon, ExternalLinkIcon, XMarkIcon, MicrosoftStoreIcon } from './components/icons';
+import { PERSONAL_INFO, SKILLS, EXPERIENCE, PROJECTS, PUBLICATIONS } from './src/data/constants';
+import type { Project } from './src/data/types';
+import { GithubIcon, LinkedinIcon, MailIcon, CodeBracketIcon, CubeTransparentIcon, ExternalLinkIcon, XMarkIcon, MicrosoftStoreIcon } from './src/components/icons';
 
 const NavBar: React.FC = () => (
   <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-slate-200">
