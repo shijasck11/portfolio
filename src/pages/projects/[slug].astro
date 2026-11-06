@@ -1,0 +1,34 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Base from '../../layouts/Base.astro';
+import NavBar from '../../components/NavBar.astro';
+import Footer from '../../components/Footer.astro';
+import ProjectDetails from '../../components/ProjectDetails';
+import { PROJECTS } from '../../data/constants';
+import type { Project } from '../../data/types';
+
+export const getStaticPaths = (() =>
+  PROJECTS.map((project) => ({ params: { slug: project.slug }, props: { project } }))) satisfies GetStaticPaths;
+
+const { project } = Astro.props as { project: Project };
+// Only the phone mock-up's demo switcher needs JavaScript; every other
+// project page ships none.
+const interactive = Boolean(project.isMobile && project.videos?.length);
+---
+
+<Base title={project.title} description={project.description} image={project.image} imageAlt={`${project.title} screenshot`}>
+  <NavBar />
+  <main class="pt-24 pb-8 px-4">
+    <div class="max-w-4xl mx-auto">
+      <a href="/#projects" class="inline-flex items-center gap-1 text-sm font-medium text-slate-500 hover:text-[#1e3a8a] transition-colors mb-6">
+        &larr; All projects
+      </a>
+      {interactive ? (
+        <ProjectDetails client:visible project={project} headingLevel="h1" />
+      ) : (
+        <ProjectDetails project={project} headingLevel="h1" />
+      )}
+    </div>
+  </main>
+  <Footer />
+</Base>

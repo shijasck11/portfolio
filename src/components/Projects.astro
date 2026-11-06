@@ -1,0 +1,86 @@
+---
+import { PROJECTS, PUBLICATIONS } from '../data/constants';
+import { GithubIcon, ExternalLinkIcon } from './icons';
+import ProjectModal from './ProjectModal';
+---
+
+<section id="projects" class="reveal py-16 px-4 max-w-6xl mx-auto">
+  <h2 class="text-3xl font-bold text-[#1e3a8a] text-center mb-10">Projects</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {PROJECTS.map((project) => (
+      <article class="bg-white rounded-xl shadow-xs border border-slate-100 overflow-hidden flex flex-col h-full">
+        <div class="h-48 bg-slate-900 flex items-center justify-center p-4 relative overflow-hidden group">
+          <img src={project.image} alt={project.title} loading="lazy" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-75 transition-opacity duration-300" />
+          <div class="relative z-10 text-white font-bold text-xl drop-shadow-md" aria-hidden="true">{project.title}</div>
+        </div>
+        <div class="p-6 flex flex-col grow">
+          <h3 class="text-xl font-bold text-slate-900 mb-2">{project.title}</h3>
+          <p class="text-slate-500 mb-6 text-sm grow">{project.description}</p>
+
+          <ul class="flex flex-wrap gap-2 mb-6">
+            {project.tags.slice(0, 4).map((tag) => (
+              <li class="bg-slate-100 text-slate-600 px-2 py-1 rounded-full text-xs font-medium">{tag}</li>
+            ))}
+            {project.tags.length > 4 && (
+              <li class="bg-slate-100 text-slate-600 px-2 py-1 rounded-full text-xs font-medium">
+                +{project.tags.length - 4}
+              </li>
+            )}
+          </ul>
+
+          <div class="flex items-center justify-between mt-auto pt-4">
+            <a
+              href={`/projects/${project.slug}/`}
+              data-project={project.slug}
+              aria-label={`View project: ${project.title}`}
+              class="text-sm font-bold text-slate-900 hover:text-[#1e3a8a] transition-colors flex items-center"
+            >
+              View Project &rarr;
+            </a>
+            <div class="flex items-center gap-3">
+              {project.githubUrl && (
+                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-slate-900 transition-colors" title="View Source Code" aria-label={`${project.title} source code on GitHub`}>
+                  <GithubIcon className="w-5 h-5" />
+                </a>
+              )}
+              {project.liveUrl && (
+                <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-slate-900 transition-colors" title="Visit Website" aria-label={`${project.title} website`}>
+                  {project.linkIcon ? (
+                    <img src={project.linkIcon} alt="" class="w-5 h-5 object-contain" />
+                  ) : (
+                    <ExternalLinkIcon className="w-5 h-5" />
+                  )}
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+
+  <h2 class="text-3xl font-bold text-[#1e3a8a] text-center mt-24 mb-10">Publications</h2>
+  <div class="space-y-6 max-w-4xl mx-auto">
+    {PUBLICATIONS.map((pub, index) => (
+      <article
+        class="reveal bg-white rounded-xl shadow-xs border border-slate-100 p-8 flex flex-col"
+        data-reveal-margin="-50px"
+        style={`transition-delay: ${index * 0.1}s`}
+      >
+        <h3 class="text-xl font-bold text-slate-900 mb-2">{pub.title}</h3>
+        <p class="text-slate-500 mb-5">{pub.conference} - {pub.date}</p>
+        <a
+          href={pub.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-2 text-slate-600 hover:text-[#1e3a8a] transition-colors w-fit font-medium"
+        >
+          View Publication <ExternalLinkIcon className="w-4 h-4" />
+        </a>
+      </article>
+    ))}
+  </div>
+
+  <ProjectModal client:idle projects={PROJECTS} />
+</section>

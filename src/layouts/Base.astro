@@ -71,10 +71,15 @@ const imageUrl = new URL(image, Astro.site);
         const els = document.querySelectorAll('.reveal');
         const show = (el) => el.classList.add('is-visible');
         if (!('IntersectionObserver' in window)) return els.forEach(show);
-        const io = new IntersectionObserver((entries) => {
+        // One observer per data-reveal-margin value (default: any pixel in view).
+        const observers = {};
+        const onEnter = (entries, io) => {
           for (const e of entries) if (e.isIntersecting) { show(e.target); io.unobserve(e.target); }
+        };
+        els.forEach((el) => {
+          const margin = el.dataset.revealMargin || '0px';
+          (observers[margin] ||= new IntersectionObserver(onEnter, { rootMargin: margin })).observe(el);
         });
-        els.forEach((el) => io.observe(el));
       });
     </script>
 
