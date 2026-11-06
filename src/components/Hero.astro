@@ -1,0 +1,37 @@
+---
+import { PERSONAL_INFO } from '../data/constants';
+import { GithubIcon, LinkedinIcon, MailIcon } from './icons';
+
+const social = (name: string) => PERSONAL_INFO.socials.find((s) => s.name === name)?.url;
+---
+
+<section
+  id="about"
+  class="reveal pt-32 pb-16 px-4 flex flex-col items-center justify-center text-center"
+>
+  <div class="w-40 h-40 mb-6 rounded-full overflow-hidden border-4 border-white shadow-lg">
+    <img src="/media/profile.png" alt={PERSONAL_INFO.name} class="w-full h-full object-cover" />
+  </div>
+  <h1 class="text-5xl md:text-6xl font-extrabold text-[#1e3a8a] mb-2 tracking-tight">
+    {PERSONAL_INFO.name}
+  </h1>
+  <p class="text-xl text-slate-500 mb-6">{PERSONAL_INFO.title}</p>
+  <div class="flex gap-6 mb-16">
+    <a href={social('GitHub')} target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-slate-400 hover:text-slate-800 transition-colors">
+      <GithubIcon className="w-7 h-7" />
+    </a>
+    <a href={social('LinkedIn')} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-slate-400 hover:text-[#0077b5] transition-colors">
+      <LinkedinIcon className="w-7 h-7" />
+    </a>
+    <a href={social('Email')} aria-label="Email" class="text-slate-400 hover:text-slate-800 transition-colors">
+      <MailIcon className="w-7 h-7" />
+    </a>
+  </div>
+
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-3xl font-bold text-[#1e3a8a] mb-6">About Me</h2>
+    <p class="text-lg text-slate-500 leading-relaxed">
+      {PERSONAL_INFO.about}
+    </p>
+  </div>
+</section>

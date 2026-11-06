@@ -4,7 +4,7 @@ import {
     LinkedinIcon, 
     MailIcon, 
     GlobeIcon,
-} from './components/icons';
+} from '../components/icons';
 
 export const PERSONAL_INFO = {
   name: "Shijas Cherakkatil",
@@ -18,6 +18,9 @@ export const PERSONAL_INFO = {
   ],
   about: "I'm a passionate Software Developer with a strong foundation in full-stack development, native desktop engineering, and immersive 3D/VR environments. My work at SimuTraffX Lab at York University allowed me to bridge the gap between complex traffic software like SUMO/Vissim and interactive 3D engines like Unity. Most recently, I architected and launched NeatNotes, a high-performance native Windows note-taking application built with C#, .NET 8, and WinUI 3. I am driven by the challenge of optimizing performance—whether tuning Win2D rendering pipelines for infinite canvases or building intuitive user interfaces. My experience spans from mobile and web app development to pioneering co-simulation tools and publishing production-ready applications to the Microsoft Store."
 };
+
+/** Site-wide title: browser tab on the home page, og:site_name, JSON-LD WebSite name. */
+export const SITE_TITLE = `${PERSONAL_INFO.name} | Portfolio`;
 
 export const SKILLS = {
     "Languages & Frameworks": [
@@ -63,6 +66,7 @@ export const SKILLS = {
 
 export const PROJECTS: Project[] = [
   {
+    slug: "neatnotes",
     title: "NeatNotes",
     description: "A lightning-fast, native Windows note-taking app featuring an infinite canvas, smart math solver, and total local privacy.",
     longDescription: [
@@ -80,6 +84,7 @@ export const PROJECTS: Project[] = [
     linkIcon: "/media/NeatNotesLogoSquare256.png", // Replace with your actual icon path
   },
   {
+    slug: "sumo2unity",
     title: "Sumo2Unity",
     description: "Developed a co-simulation tool to link traffic simulators with Unity for immersive 3D/VR analysis.",
     longDescription: [
@@ -95,6 +100,7 @@ export const PROJECTS: Project[] = [
     videos: [{ title: "Demo", url: "https://www.youtube.com/watch?v=9nSCKIz6lQI&list=TLGGlvP7zGF-afwyNDAzMjAyNg&t=4s" }],
   },
   {
+    slug: "vibetribe",
     title: "VibeTribe",
     description: "A full-stack mobile app for service booking, built with React Native and a Node.js backend.",
     longDescription: [
@@ -114,6 +120,7 @@ export const PROJECTS: Project[] = [
     isMobile: true,
   },
   {
+    slug: "campusbuddy",
     title: "CampusBuddy",
     description: "A web application built with Angular and PostgreSQL to assist students with campus life.",
     longDescription: [
@@ -178,45 +185,3 @@ export const PUBLICATIONS: Publication[] = [
         url: "https://journals.sagepub.com/doi/abs/10.1177/03611981241238127"
     }
 ];
-
-
-export const GEMINI_CONTEXT = `
-You are Shijas Cherakkatil's AI assistant. Your purpose is to answer questions from recruiters and hiring managers about Shijas's skills, experience, and projects based ONLY on the context provided below. Be professional, concise, and helpful. Frame your answers from the perspective of an assistant talking about Shijas. Do not make up information. If the answer is not in the context, say "I don't have specific information on that, but I can tell you about his related skills and experience."
-
-**CONTEXT ABOUT SHIJAS CHERAKKATIL:**
-
-**Role:** Junior Software Developer at SimuTraffX Lab, York University.
-
-**Summary:**
-Shijas is a software developer focused on full-stack development and creating immersive 3D/VR environments for transportation simulations. He integrates traffic software like SUMO and Vissim with Unity. He is passionate about performance optimization, building intuitive UIs, and solving real-world problems.
-
-**Work Experience: SimuTraffX Lab - York University (May 2023 - Present)**
-- Integrates SUMO & Vissim with Unity using C# for 3D/VR traffic analysis.
-- Uses Python for real-time data connections with transportation software.
-- Optimized Unity projects with techniques like Occlusion Culling, achieving a 35% frame rate improvement.
-- Builds user-friendly interfaces for simulation control.
-- Uses Git and GitHub for version control.
-
-**Key Skills:**
-- **3D & Simulation:** Unity, C#, SUMO, Vissim, VR/AR, Blender
-- **Frontend:** React, React Native, Angular, TypeScript, JavaScript, HTML, CSS, Tailwind CSS
-- **Backend:** Node.js, Express, Python, RESTful API, Django
-- **Databases:** MongoDB, PostgreSQL, Firebase, SQL
-- **Cloud & DevOps:** Google Cloud, Git, GitHub, Heroku
-
-**Projects:**
-1.  **Vissim & SUMO to Unity Integration:** This is his main work at the research lab. He developed a tool to connect traffic simulators with Unity for immersive 3D/VR analysis. This work resulted in a published IEEE paper. Key technologies are Unity, C#, SUMO, Vissim, VR.
-2.  **VibeTribe (Mobile App):** A full-stack mobile app for service booking. It includes user authentication and profile management. Built with React Native, TypeScript, Node.js, MongoDB, and Google Cloud.
-3.  **CampusBuddy (Web App):** A full-stack web application for students with registration and search features. Built with Angular, TypeScript, Node.js, and PostgreSQL.
-
-**Academic Publications:**
-- **SUMO2Unity:** An Open-Source Traffic Co-Simulation Tool to Improve Road Safety (IEEE IV 2024)
-- **A virtual reality-based digital twin for evaluating...truck-only lanes** (Accident Analysis & Prevention 2024)
-- **Developing an Open-Source Tool for Pedestrian Safety and Level of Service Analysis** (IEEE IV 2024)
-- **Investigating the Impact of In-Vehicle Auditory Collision Warnings on Driver Behavior...** (Transportation Research Record 2024)
-
-**Education:**
-- **Institution:** Seneca College
-- **Program:** Computer Programming and Analysis (Graduated with Honors, 3.8/4.0 GPA)
-- **Key Skills Gained:** Full-stack development, database management, software design principles, React, Angular, SQL, NoSQL.
-`;

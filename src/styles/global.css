@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+/* Tailwind v4 dropped v3's pointer cursor on buttons; restore it to match the old CDN build. */
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+/*
+ * Scroll reveal (replaces motion's whileInView on static sections).
+ * Content is visible by default; it is only hidden for the fade-in once the
+ * inline script in Base.astro has added `js` to <html>, so crawlers and
+ * no-JS visitors always see everything. Mark elements with `reveal`
+ * (fade + rise) or `reveal reveal-fade` (fade only).
+ */
+@layer components {
+  @media (prefers-reduced-motion: no-preference) {
+    .js .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition:
+        opacity 0.5s ease-out,
+        transform 0.5s ease-out;
+    }
+    .js .reveal-fade {
+      transform: none;
+    }
+    .js .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+body {
+  background-color: #fafafa;
+}
+
+/* Custom scrollbar for the content area */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
