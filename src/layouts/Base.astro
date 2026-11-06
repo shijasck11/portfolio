@@ -1,21 +1,24 @@
 ---
 import '../styles/global.css';
-import { PERSONAL_INFO } from '../data/constants';
+import { PERSONAL_INFO, SITE_TITLE } from '../data/constants';
 
 interface Props {
   /** Page-specific title. Omit on the home page to use the site title. */
   title?: string;
   /** Meta and social description, ideally 120–160 characters. */
   description?: string;
-  /** Social preview image: a path under public/ or an absolute URL. */
+  /** Social preview image: a path under public/ or an absolute URL. Ideally 1200x630. */
   image?: string;
   imageAlt?: string;
+  /** Pixel size of `image`, when known. */
+  imageWidth?: number;
+  imageHeight?: number;
   type?: 'website' | 'article' | 'profile';
   /** Keep the page out of search results (e.g. a 404 page). */
   noindex?: boolean;
 }
 
-const SITE_TITLE = `${PERSONAL_INFO.name} | Portfolio`;
+const DEFAULT_IMAGE = { src: '/media/og-image.jpg', width: 1200, height: 630 };
 const DEFAULT_DESCRIPTION =
   `${PERSONAL_INFO.name} is a software developer building native Windows apps with C# and WinUI 3, ` +
   'full-stack web and mobile apps, and Unity 3D/VR traffic simulations.';
@@ -23,11 +26,14 @@ const DEFAULT_DESCRIPTION =
 const {
   title,
   description = DEFAULT_DESCRIPTION,
-  image = '/media/profile.png',
-  imageAlt = PERSONAL_INFO.name,
+  image = DEFAULT_IMAGE.src,
+  imageAlt = `${PERSONAL_INFO.name}, ${PERSONAL_INFO.title}`,
   type = 'website',
   noindex = false,
 } = Astro.props;
+const usingDefaultImage = image === DEFAULT_IMAGE.src;
+const imageWidth = Astro.props.imageWidth ?? (usingDefaultImage ? DEFAULT_IMAGE.width : undefined);
+const imageHeight = Astro.props.imageHeight ?? (usingDefaultImage ? DEFAULT_IMAGE.height : undefined);
 
 const fullTitle = title ? `${title} | ${PERSONAL_INFO.name}` : SITE_TITLE;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
@@ -45,6 +51,7 @@ const imageUrl = new URL(image, Astro.site);
     <link rel="canonical" href={canonicalUrl} />
     {noindex && <meta name="robots" content="noindex" />}
     <meta name="theme-color" content="#fafafa" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
 
     {/* Open Graph */}
     <meta property="og:type" content={type} />
@@ -53,11 +60,16 @@ const imageUrl = new URL(image, Astro.site);
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={imageUrl} />
+    {imageWidth && imageHeight && (
+      <>
+        <meta property="og:image:width" content={String(imageWidth)} />
+        <meta property="og:image:height" content={String(imageHeight)} />
+      </>
+    )}
     <meta property="og:image:alt" content={imageAlt} />
 
-    {/* Twitter / X: "summary" suits the square-ish profile photo; switch to
-        summary_large_image once a 1200x630 preview image exists (step 7). */}
-    <meta name="twitter:card" content="summary" />
+    {/* Twitter / X */}
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={imageUrl} />

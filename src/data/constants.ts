@@ -19,6 +19,9 @@ export const PERSONAL_INFO = {
   about: "I'm a passionate Software Developer with a strong foundation in full-stack development, native desktop engineering, and immersive 3D/VR environments. My work at SimuTraffX Lab at York University allowed me to bridge the gap between complex traffic software like SUMO/Vissim and interactive 3D engines like Unity. Most recently, I architected and launched NeatNotes, a high-performance native Windows note-taking application built with C#, .NET 8, and WinUI 3. I am driven by the challenge of optimizing performance—whether tuning Win2D rendering pipelines for infinite canvases or building intuitive user interfaces. My experience spans from mobile and web app development to pioneering co-simulation tools and publishing production-ready applications to the Microsoft Store."
 };
 
+/** Site-wide title: browser tab on the home page, og:site_name, JSON-LD WebSite name. */
+export const SITE_TITLE = `${PERSONAL_INFO.name} | Portfolio`;
+
 export const SKILLS = {
     "Languages & Frameworks": [
         { name: "C#", icon: "/media/skills/csharp.svg" },
