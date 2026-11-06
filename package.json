@@ -13,12 +13,9 @@
     "lint": "tsc --noEmit"
   },
   "dependencies": {
-    "@google/genai": "^1.21.0",
-    "framer-motion": "^12.23.22",
     "motion": "^12.38.0",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "react-router-dom": "^7.9.3"
+    "react-dom": "^19.1.1"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.4",

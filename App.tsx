@@ -7,6 +7,7 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { PERSONAL_INFO, SKILLS, EXPERIENCE, PROJECTS, PUBLICATIONS } from './constants';
+import type { Project } from './types';
 import { GithubIcon, LinkedinIcon, MailIcon, CodeBracketIcon, CubeTransparentIcon, ExternalLinkIcon, XMarkIcon, MicrosoftStoreIcon } from './components/icons';
 
 const NavBar: React.FC = () => (
@@ -151,10 +152,8 @@ const SkillsSection: React.FC = () => (
   </motion.section>
 );
 
-const ProjectModal: React.FC<{ project: any; onClose: () => void }> = ({ project, onClose }) => {
+const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ project, onClose }) => {
   const [activeVideoIndex, setActiveVideoIndex] = useState(0);
-
-  if (!project) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-xs">
@@ -170,7 +169,7 @@ const ProjectModal: React.FC<{ project: any; onClose: () => void }> = ({ project
           <h2 className="text-3xl font-bold text-[#1e3a8a] mb-6">{project.title}</h2>
           
           <ul className="space-y-4 mb-8 grow">
-            {(Array.isArray(project.longDescription) ? project.longDescription : [project.longDescription]).map((desc: string, i: number) => (
+            {project.longDescription.map((desc, i) => (
               <li key={i} className="flex items-start text-slate-600">
                 <span className="text-slate-400 mr-2 mt-1.5 text-xs">•</span>
                 <span className="leading-relaxed">{desc}</span>
@@ -182,7 +181,7 @@ const ProjectModal: React.FC<{ project: any; onClose: () => void }> = ({ project
             <div className="mb-8">
               <h4 className="text-sm font-bold text-slate-700 mb-3 uppercase tracking-wider">Demos:</h4>
               <div className="flex flex-wrap gap-2">
-                {project.videos.map((video: any, i: number) => (
+                {project.videos.map((video, i) => (
                   project.isMobile ? (
                     <button 
                       key={i} 
@@ -248,7 +247,7 @@ const ProjectModal: React.FC<{ project: any; onClose: () => void }> = ({ project
           </div>
 
           <div className="flex flex-wrap gap-2">
-            {project.tags.map((tag: string) => (
+            {project.tags.map((tag) => (
               <span key={tag} className="bg-slate-100 text-slate-600 px-3 py-1 rounded-full text-xs font-medium">
                 {tag}
               </span>
@@ -282,7 +281,7 @@ const ProjectModal: React.FC<{ project: any; onClose: () => void }> = ({ project
 };
 
 const ProjectsSection: React.FC = () => {
-  const [selectedProject, setSelectedProject] = useState<any | null>(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
     <motion.section 
