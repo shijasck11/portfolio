@@ -48,8 +48,7 @@ const imageUrl = new URL(image, Astro.site);
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <meta name="author" content={PERSONAL_INFO.name} />
-    <link rel="canonical" href={canonicalUrl} />
-    {noindex && <meta name="robots" content="noindex" />}
+    {noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonicalUrl} />}
     <meta name="theme-color" content="#fafafa" />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
